@@ -1,0 +1,163 @@
+:root{
+    /*Primary*/
+
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+    /*Neutral*/
+
+--rey500: hsl(234, 12%, 34%);
+--Grey400: hsl(212, 6%, 44%);
+--White: hsl(0, 0%, 100%);
+--font-poppins: ("Poppins", sans-serif);
+
+--font-size: 1.5rem;
+
+
+/*Border Card*/
+--border:.4rem;
+--solid: solid;
+}
+
+html{
+    font-size: 62.5%;
+    padding: 0;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: var(--font-poppins);
+    font-size: var(--font-size);
+    background-color: var(--White);
+
+}
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+}
+
+header{
+    text-align:center; 
+
+}
+
+header h2{
+    font-size: 3.4rem;
+    font-weight: 200;
+
+}
+
+header h3{
+    font-size: 3.4rem;
+    font-weight: 600;
+}
+
+header p{
+    margin: 0 auto; 
+    max-width: 60rem;
+    margin-top:2rem;
+    
+}
+
+.main{
+    display:grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem; 
+    margin-top: 6rem;
+}
+
+
+.box{
+    background-color: var(--White);
+    border-radius: 7px;
+    padding: 3rem; 
+    text-align: right;
+
+    box-shadow: -1px 7px 24px 0px rgba(0,0,0,0.62);
+-webkit-box-shadow: -1px 7px 24px 0px rgba(0,0,0,0.62);
+-moz-box-shadow: -1px 7px 24px 0px rgba(0,0,0,0.62);
+}
+
+.box-text{
+    padding-bottom: 5rem;
+    text-align: left;
+}
+
+
+.box1{
+    border-top: var(--border) var(--solid) var(--Cyan);
+
+}
+
+.box2{
+    border-top: var(--border) var(--solid) var(--Red);
+
+}
+.box3{
+    border-top: var(--border) var(--solid) var(--Orange);
+
+}
+
+.box4{
+    border-top: var(--border) var(--solid) var(--Blue);
+
+}
+
+.box-text h5{
+    font-size: 2rem;
+    margin-bottom: 1rem; 
+
+}
+
+.box-container{
+    display: flex;
+    flex-direction: column; 
+}
+
+.box1, .box4{
+    align-self: center;
+}
+
+.box3{
+    margin-top: 2rem;
+}
+
+
+@media(max-width: 76.8rem){
+    .main{
+        grid-template-columns: 1fr;
+    }
+    .box4{
+        margin-top: 0;
+    }
+
+}
+
+@media (max-width: 4.25rem) {
+  body {
+    font-size: 13px;
+  }
+
+  header h2 {
+    font-size: 22px;
+  }
+
+  header h3 {
+    font-size: 22px;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  .box-text {
+    padding-bottom: 30px;
+  }
+}
